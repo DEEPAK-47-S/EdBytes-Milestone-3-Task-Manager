@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEEPAK TASK MANAGER - My Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="app-header">
+      <span class="badge">EdBytes Milestone 3</span>
+      <h1>DEEPAK TASK MANAGER</h1>
+      <p class="subtitle">Keep track of your daily work</p>
+    </header>
+
+    <div class="card task-container">
+      <form id="form">
+        <label for="text" class="input-label">Task
+          <input id="text" type="text" maxlength="200" placeholder="Enter a task (e.g. Learn Python)" autocomplete="off">
+        </label>
+        <button id="add-btn" type="submit">Add</button>
+      </form>
+
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <section class="tasks-wrapper" aria-label="Task list">
+        <h2 class="tasks-heading">My Tasks</h2>
+        <ul id="list"></ul>
+      </section>
+    </div>
+
+    <footer class="app-footer">
+      <p>DEEPAK TASK MANAGER &bull; EdBytes Full Stack Development Internship</p>
+    </footer>
+  </main>
+</body>
+</html>

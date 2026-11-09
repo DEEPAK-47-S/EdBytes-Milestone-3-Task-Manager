@@ -1,0 +1,4 @@
+const list=document.getElementById('list');let tasks=[];try{const saved=JSON.parse(localStorage.getItem('practice-tasks')||'[]');if(Array.isArray(saved))tasks=saved.filter(x=>typeof x==='string');}catch{}
+function save(){localStorage.setItem('practice-tasks',JSON.stringify(tasks));}
+function render(){list.replaceChildren();tasks.forEach((text,index)=>{const row=document.createElement('li');row.textContent=text;const button=document.createElement('button');button.textContent='Delete';button.onclick=()=>{/* TODO: remove the indexed task, save and render */};row.append(button);list.append(row);});}
+document.getElementById('form').onsubmit=e=>{e.preventDefault();const input=document.getElementById('text'),text=input.value.trim();/* TODO: reject blank text; push text, save(), render(), clear input. Use textContent, not HTML. */};render();
